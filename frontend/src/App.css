@@ -1,78 +1,93 @@
-/* =========================
-   APP LAYOUT
-========================= */
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
-  color: var(--text);
 }
 
-/* main content area */
-.main-content {
+main {
   flex: 1;
-  padding: 20px;
 }
 
-/* optional wrapper */
-.page {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Loading Screen */
 
-/* =========================
-   HERO (ONLY LAYOUT, NOT STYLE HEAVY)
-========================= */
-.hero {
-  min-height: 85vh;
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #fff7ed,
+    #fef3c7
+  );
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* =========================
-   SECTION SPACING
-========================= */
-.section {
-  padding: 80px 0;
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(245, 158, 11, 0.2);
+  border-top: 5px solid #f59e0b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.section-subtitle {
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 20px;
+/* Hero Glow */
+
+.hero-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #f59e0b;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
 }
+
+/* Hover Utility */
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Fade In */
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* WhatsApp Floating Button */
+
+.whatsapp-btn {
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+
+/* Page Wrapper */
+
 .page {
-  width: 100%;
-}
-
-.section {
-  padding: 70px 0;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  text-align: center;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-.card {
-  padding: 20px;
-  border-radius: 16px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
