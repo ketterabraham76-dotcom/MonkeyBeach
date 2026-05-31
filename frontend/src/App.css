@@ -1,0 +1,78 @@
+/* =========================
+   APP LAYOUT
+========================= */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* optional wrapper */
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO (ONLY LAYOUT, NOT STYLE HEAVY)
+========================= */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.page {
+  width: 100%;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+}
