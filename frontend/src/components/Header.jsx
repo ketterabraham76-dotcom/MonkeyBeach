@@ -12,11 +12,11 @@ export default function Header() {
 
         <div>
           <h1 className="font-bold text-lg">
-            Monkey Beach
+              Monkey Beach
           </h1>
 
           <p className="text-sm text-gray-500">
-            Sports Bar & Guest House
+               Sports Bar & Guest House
           </p>
         </div>
       </div>
